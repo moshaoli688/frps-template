@@ -1,0 +1,17 @@
+services:
+  frps:
+    image: ${FRPS_IMAGE}
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    entrypoint: ["/bin/sh", "/app/entrypoint.sh"]
+    env_file:
+      - .env
+    network_mode: host
+    volumes:
+      - ./app:/app:ro
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
