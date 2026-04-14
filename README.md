@@ -44,7 +44,7 @@ frps-template/
 Edit `.env`:
 
 ```env
-CONTAINER_NAME=frps-gateway-sz
+CONTAINER_NAME=frps-gateway-demo
 FRPS_IMAGE=frps-gateway:latest
 
 FRP_BIND_PORT=8000
